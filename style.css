@@ -2,8 +2,13 @@
 Theme Name:  mon theme
 Author:  massa anthony
 */
+header {
+  height: 10vh; }
 
-body{
+main {
+  height: 80vh; }
 
-    
-}
+footer {
+  height: 10vh; }
+
+/*# sourceMappingURL=style.css.map */
