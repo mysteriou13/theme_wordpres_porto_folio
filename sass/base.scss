@@ -4,21 +4,26 @@ Author:  massa anthony
 */
 
 
-.header{
+@import './variable.scss';
+
+@import './card.scss';
+
+header{
 
     height: 10vh;
 
 }
 
-.main{
+main{
 
     //background-color: red;
-    height: 80vh;
+    height: $height_main;
 
 }
 
-.footer{
+footer{
 
     height: 10vh;
 
 }
+

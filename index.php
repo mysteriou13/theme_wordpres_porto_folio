@@ -32,8 +32,86 @@
 
             </header>
         
-            <main>
+            <main class = "d-flex">
            
+            <div class = "w-100">
+          
+            <?php 
+/*argument par l'affichage des post*/
+$defaults = array(
+    'numberposts'      => 4,
+    'category'         => 0,
+    'orderby'          => 'date',
+    'order'            => 'DESC',
+    'include'          => array(),
+    'exclude'          => array(),
+    'meta_key'         => '',
+    'meta_value'       => '',
+    'post_type'        => 'post',
+    'suppress_filters' => true,
+);
+
+$myposts = get_posts();
+
+$tab = [];
+
+/*recuperation des id des post*/
+foreach($myposts as $value){
+
+    array_push($tab,$value->ID);
+
+}
+
+/*  nombre de page de post */
+
+$ligne = array_chunk($tab,3);
+
+echo "<div class = 'd-flex justify-content-around'>";
+
+for($p = 0; $p < count($ligne); $p++){
+
+    echo "<div><a href = '".site_url()."?page=$p'>page ".$p."</a></div>";
+
+}
+
+echo "</div>";
+if(isset($_GET['page']) && !empty($_GET['page'])){
+
+    $nbpage = $_GET['page'];
+
+}else{
+
+    $nbpage = 0;
+}
+
+$el_ligne = array_chunk($ligne[$nbpage],2);
+
+/*affichage des ligne*/
+
+for($a1 = 0; $a1 < count($el_ligne); $a1++){
+
+echo "<div class = 'd-flex justify-content-evenly h-25'>";
+
+
+   foreach($el_ligne[$a1] as  $el){
+
+    $link = get_permalink($el);
+    
+    $title = get_post($el)->post_title;
+
+    echo "<div> <a href ='$link'>".$title."</div>";
+
+   }
+
+    echo "</div>";
+
+}
+
+            ?>
+          
+             </div>
+
+
             </main>
 
                 <footer>

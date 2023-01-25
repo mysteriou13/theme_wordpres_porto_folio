@@ -2,6 +2,10 @@
 Theme Name:  mon theme
 Author:  massa anthony
 */
+.div_box {
+  background-color: red;
+  width: 20%; }
+
 header {
   height: 10vh; }
 
