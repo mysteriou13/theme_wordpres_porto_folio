@@ -3,8 +3,12 @@ Theme Name:  mon theme
 Author:  massa anthony
 */
 .div_box {
-  background-color: red;
+  min-height: 25vh;
   width: 20%; }
+
+.ligne_box {
+  margin-bottom: 2%;
+  margin-top: 2%; }
 
 header {
   height: 10vh; }

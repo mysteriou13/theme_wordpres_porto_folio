@@ -39,10 +39,10 @@
             <?php 
 /*argument par l'affichage des post*/
 $defaults = array(
-    'numberposts'      => 4,
+    'numberposts'      => -1,
     'category'         => 0,
     'orderby'          => 'date',
-    'order'            => 'DESC',
+    'order'            => 'ASC',
     'include'          => array(),
     'exclude'          => array(),
     'meta_key'         => '',
@@ -51,7 +51,7 @@ $defaults = array(
     'suppress_filters' => true,
 );
 
-$myposts = get_posts();
+$myposts = get_posts($defaults);
 
 $tab = [];
 
@@ -90,7 +90,7 @@ $el_ligne = array_chunk($ligne[$nbpage],2);
 
 for($a1 = 0; $a1 < count($el_ligne); $a1++){
 
-echo "<div class = 'd-flex justify-content-evenly h-25'>";
+echo "<div class = 'd-flex justify-content-evenly ligne_box' >";
 
 
    foreach($el_ligne[$a1] as  $el){
@@ -99,8 +99,18 @@ echo "<div class = 'd-flex justify-content-evenly h-25'>";
     
     $title = get_post($el)->post_title;
 
-    echo "<div> <a href ='$link'>".$title."</div>";
+    echo "<div class ='div_box border border-dark'> 
+    
+    <a href ='$link' class = 'text-reset text-decoration-none'> <p> <u> ".$title." </u> </p>
+    
+    <p style = 'height:80%'>
+       ".get_the_excerpt($el)."
 
+       </p>
+
+    </div></a>";
+
+    
    }
 
     echo "</div>";
