@@ -123,7 +123,7 @@ echo "<div class = 'd-flex justify-content-evenly ligne_box' >";
 
    foreach($el_ligne[$a1] as  $el){
 
-    $link = get_permalink($el);
+    $link = get_permalink($el)."?post=".$el;
     
     $title = get_post($el)->post_title;
 
@@ -146,6 +146,24 @@ echo "<div class = 'd-flex justify-content-evenly ligne_box' >";
 }
 
 }
+
+
+
+     if(isset($_GET['post']) && !empty($_GET['post']) ){
+
+    
+         if(empty(get_post($_GET['post']))){
+
+            require_once(get_template_directory()."/template/404.php");
+
+         }else{
+
+ echo "<center>".get_post($_GET['post'])->post_title."</center>"."</br>".get_post($_GET['post'])->post_content; 
+
+         }
+
+     }
+
 
             ?>
           
