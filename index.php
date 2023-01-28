@@ -24,11 +24,22 @@
         </head>
 
     <body>
-        <header class = "d-flex justify-content-around flex-wrap header">
+        <header class = "d-flex justify-content-around flex-wrap header border border-dark">
 
-        <div> <a href = ""> mon acceuil </a> </div> <div> <a  href = ""> mes création</a> </div> 
+        <div> <a href = "<?php echo  site_url()?>" class = 'text-decoration-none link_header'> mon acceuil </a> </div>
+         <div> 
+         <a  href = "<?php echo site_url()."/creation";?>" class = 'link_header text-decoration-none'> mes créations</a> 
+        </div> 
+
+        <div>
         
-        <div> <a href = "">contact</a></div> <div> <a href = ""> présentation</a> </div>
+        <a href = '<?php echo site_url()."/service"?>' class = 'link_header text-decoration-none'> mes services </a>
+
+       </div>
+
+        <div> <a href = "<?php echo site_url()."/contact" ?>" class = 'link_header text-decoration-none'>contact</a></div> 
+        
+        <div> <a href = "<?php echo site_url()."/presentation"?>" class = 'link_header text-decoration-none'> a propos</a> </div>
 
             </header>
         
@@ -37,6 +48,18 @@
             <div class = "w-100">
           
             <?php 
+            
+            if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')   
+            $url = "https://";   
+       else  
+            $url = "http://";   
+       // Append the host(domain name, ip) to the URL.   
+       $url.= $_SERVER['HTTP_HOST'];   
+       
+       // Append the requested resource location to the URL   
+       $url.= $_SERVER['REQUEST_URI'];    
+         
+
 /*argument par l'affichage des post*/
 $defaults = array(
     'numberposts'      => -1,
@@ -53,6 +76,8 @@ $defaults = array(
 
 $myposts = get_posts($defaults);
 
+$creation = site_url()."/creation";
+
 $tab = [];
 
 /*recuperation des id des post*/
@@ -66,18 +91,21 @@ foreach($myposts as $value){
 
 $ligne = array_chunk($tab,3);
 
+/*affichage page d'acceuil */
+if($url == $creation || isset($_GET['nbpage'])){
+
 echo "<div class = 'd-flex justify-content-around'>";
 
 for($p = 0; $p < count($ligne); $p++){
 
-    echo "<div><a href = '".site_url()."?page=$p'>page ".$p."</a></div>";
+    echo "<div><a href = '".$creation."?nbpage=$p'>page ".$p."</a></div>";
 
 }
 
 echo "</div>";
-if(isset($_GET['page']) && !empty($_GET['page'])){
+if(isset($_GET['nbpage']) && !empty($_GET['nbpage'])){
 
-    $nbpage = $_GET['page'];
+    $nbpage = $_GET['nbpage'];
 
 }else{
 
@@ -117,6 +145,8 @@ echo "<div class = 'd-flex justify-content-evenly ligne_box' >";
 
 }
 
+}
+
             ?>
           
              </div>
@@ -124,7 +154,7 @@ echo "<div class = 'd-flex justify-content-evenly ligne_box' >";
 
             </main>
 
-                <footer>
+                <footer class = ' border border-dark'>
                     footer
                     </footer>
         </body>

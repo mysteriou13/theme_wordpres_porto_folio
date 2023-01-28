@@ -10,6 +10,13 @@ Author:  massa anthony
   margin-bottom: 2%;
   margin-top: 2%; }
 
+.link_header {
+  color: black;
+  position: relative;
+  top: 32%; }
+  .link_header:hover {
+    color: blue; }
+
 header {
   height: 10vh; }
 
