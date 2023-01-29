@@ -10,7 +10,7 @@ require_once(get_template_directory()."/head.php");
 get_header();
 
 echo '
-<main class = "d-flex h-100">
+<main class = "d-flex">
            
 <div class = "w-100">
 ';
