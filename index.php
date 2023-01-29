@@ -10,7 +10,7 @@ require_once(get_template_directory()."/head.php");
 get_header();
 
 echo '
-<main class = "d-flex">
+<main class = "d-flex h-100">
            
 <div class = "w-100">
 ';
@@ -32,7 +32,7 @@ if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')
       
   // Afficher page d'acceuil
   
-  if($url == home_url()."/"){
+  if($url == home_url()."/" || isset($_GET['nbpage'])  && !isset($_GET['page'])){
     
     require_once(get_template_directory()."/home_page.php");
 

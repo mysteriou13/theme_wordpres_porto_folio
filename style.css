@@ -17,11 +17,21 @@ Author:  massa anthony
   .link_header:hover {
     color: blue; }
 
+.home_box {
+  width: 74%;
+  margin-left: 2%; }
+
+.aside_box {
+  width: 20%;
+  margin-left: 1%; }
+
 header {
-  height: 10vh; }
+  height: 10vh;
+  margin: 1%; }
 
 main {
-  height: 80vh; }
+  height: 80vh;
+  margin-bottom: 2%; }
 
 footer {
   height: 10vh; }

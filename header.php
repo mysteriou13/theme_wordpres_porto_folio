@@ -10,7 +10,7 @@
 
         <div>
         
-        <a href = '<?php echo site_url()."?page=service"?>' class = 'link_header text-decoration-none'> mes services </a>
+        <a href = '<?php echo site_url()."?page=tarif"?>' class = 'link_header text-decoration-none'> tarif </a>
 
        </div>
 
@@ -19,3 +19,14 @@
         <div> <a href = "<?php echo site_url()."/?page=presentation"?>" class = 'link_header text-decoration-none'> a propos</a> </div>
 
             </header>
+
+            
+            <div>
+<center>
+
+<h1> Massa Anthony devellopeur indépendant </h1>
+
+
+</center>
+
+</div>

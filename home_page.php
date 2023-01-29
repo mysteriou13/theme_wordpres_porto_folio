@@ -1,11 +1,15 @@
-<div>
 
-<center>
 
-<h1> Massa Anthony devellopeur indépendant </h1>
+<div class = 'd-flex h-100'>
 
-<h2> création  de site web </h2>
+<div class = "aside_box border border-dark">
+    aside
+</div>
 
-</center>
+<div class = "home_box border border-dark">
+    <?php 
+    require_once(get_template_directory()."/page/creation.php");
+    ?>
+</div>
 
 </div>

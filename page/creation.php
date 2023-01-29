@@ -50,7 +50,14 @@ echo "<div class = 'd-flex justify-content-around'>";
 
 for($p = 0; $p < count($ligne); $p++){
 
-    echo "<div><a href = '".$creation."?nbpage=$p'>page ".$p."</a></div>";
+    if(isset($_GET['page'])){
+
+    echo "<div><a href = '".$creation."?page=creation&nbpage=$p'>page ".$p."</a></div>";
+    }else{
+
+        echo "<div><a href = '".$creation."?nbpage=$p'>page ".$p."</a></div>";
+
+    }
 
 }
 

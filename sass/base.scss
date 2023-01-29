@@ -12,16 +12,22 @@ Author:  massa anthony
 
 @import './link_header.scss';
 
+@import './home_box.scss';
+
+@import './aside_box.scss';
+
 header{
 
     height: 10vh;
 
+    margin:1%;
 }
 
 main{
 
     //background-color: red;
     height: $height_main;
+    margin-bottom: 2%;
 
 }
 
