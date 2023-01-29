@@ -33,7 +33,9 @@ main {
   height: 80vh;
   margin-bottom: 2%; }
 
-footer {
+.footer {
+  position: relative;
+  top: 25vh;
   height: 10vh; }
 
 /*# sourceMappingURL=style.css.map */
