@@ -10,7 +10,7 @@ img {
   }
   .menu {
     position: absolute;
-    left: 0;
+    left: 4%;
     z-index: 11;
     width: 100%;
     bottom: 0;
@@ -41,4 +41,12 @@ img {
     transition: left 0s 0.75s;
   }
 
-  
+  .card_home{
+
+    position: relative;
+    margin: auto;
+    height: 96vh;
+    overflow: hidden;
+    width: 84%;
+
+  }
