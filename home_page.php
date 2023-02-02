@@ -2,7 +2,7 @@
   .card_home{
     position: relative;
  margin: auto;
- height: 78vh;
+ height: 800px;
  overflow: hidden;
  width: 90%;
 
@@ -23,6 +23,20 @@
     text-align: center;
 }
   </style>
+
+<?php 
+get_header();
+wp_head();
+
+?>
+
+<div style = "
+position: relative;  left: 34%;
+">
+<h2>
+  mes derniere créations
+</h2>
+</div>
 
 <?php 
 $nb = 5;
@@ -53,37 +67,9 @@ $nb = 5;
  
  /*boucle des slide*/
 
- echo '<div class = "card_home">';
-
- for($a = 4; $a >= 0; $a--){
- 
-
-  echo '
-  <input class="slide-input" id="slide-dot-'.$a.'" for="slide-dot'.$a.'" type="radio" name="slides" checked>
-  <div class="slide-img">
-  
-  <div style = "height:100%;" >
-  <img class="" src="https://www.codeur.com/tuto/wp-content/uploads/2021/12/slide1.jpg"  style = "object-fit:cover; height:100%; width:100%;">
-  </div>
-
-  <div>
-  '.get_post($tab[$a])->post_title.'
-  </div>
-
-  <div>
-  '.get_the_excerpt($tab[$a]).'
-  </div>
-  
-  </div>
-  ';
-
- }
-
 ?>
 
-</div>
-
-<div class="menu d-flex">
+<div class="menu d-flex" style = " position: relative; left: 35%;">
   
   <?php 
    
@@ -99,6 +85,59 @@ $nb = 5;
 
    ?>
  </div>
+
+<?php
+ echo '<div class = "card_home">';
+
+ for($a = 4; $a >= 0; $a--){
+
+  $post = get_post($tab[$a]);
+
+  $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
+ $first_img = $matches [1] [0];
+
+
+  echo '
+  <input class="slide-input" id="slide-dot-'.$a.'" for="slide-dot'.$a.'" type="radio" name="slides" checked>
+  <div class="slide-img">
+  <a href = "'.get_permalink($tab[$a]).'" class = "text-dark text-decoration-none">
+  ';
+  
+  if(!empty($first_img)){ 
+  
+  echo ' <div style = "height:72%;
+  position: relative;
+  left: 34%;
+  " >
+  <img class="" src="'.$first_img.'"  style = "object-fit:cover; height: 100%;">
+  </div>';
+  }
+
+  echo '<div  style = "position: relative;  left: 34%;">
+  <h1>
+  '.get_post($tab[$a])->post_title.'
+  </h1>
+  </div>
+
+  <div style = "
+  width: 45%;
+  position: relative;
+  left: 34%;
+  ">
+  '.get_the_excerpt($tab[$a]).'
+  </div>
+  
+  </div>
+  </a>
+  ';
+
+ }
+
+?>
+
+</div>
+
+
 
 <?php
  
