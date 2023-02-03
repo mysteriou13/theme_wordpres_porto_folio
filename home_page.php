@@ -1,32 +1,4 @@
-<style>
-  .card_home{
-    position: relative;
- margin: auto;
- height: 800px;
- overflow: hidden;
- width: 90%;
-
- max-width: 100%;
-  }
-
-  .menu_home{
-    
-  }
-
-
-  .menu {
-    position: relative;
-    left: 5%;
-    z-index: 11;
-    width: 100%;
-    bottom: 0;
-    text-align: center;
-}
-  </style>
-
 <?php 
-get_header();
-wp_head();
 
 ?>
 

@@ -12,7 +12,7 @@
 
         <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
 
-        <link rel="stylesheet" href="<?php echo get_template_directory_uri()."/carrousel.css" ?>">
+     
         
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
