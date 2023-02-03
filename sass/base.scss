@@ -16,6 +16,11 @@ Author:  massa anthony
 
 @import './aside_box.scss';
 
+html{
+
+    overflow-x: hidden;
+}
+
 header{
 
     height: 10vh;
