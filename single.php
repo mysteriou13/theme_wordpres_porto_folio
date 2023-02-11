@@ -3,9 +3,16 @@
 
     <body>
 
-<?php 
+<style>
+    <?php
 
-require_once(get_template_directory()."/head.php");
+    require_once(__DIR__."/style.css") ;
+
+    ?>
+    </style>
+
+<?php 
+wp_head();
 
 get_header();
 
