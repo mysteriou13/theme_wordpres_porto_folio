@@ -86,14 +86,24 @@ echo "<div class = 'd-flex justify-content-evenly ligne_box' >";
     
     $title = get_post($el)->post_title;
 
+
+    $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', get_post($el)->post_content, $matches);
+    $first_img = $matches [1] [0];
+
     echo "<div class ='div_box border border-dark'> 
     
     <a href ='$link' class = 'text-reset text-decoration-none'> <p> <u> ".$title." </u> </p>
     
-    <p style = 'height:80%'>
-       ".get_the_excerpt($el)."
+    <div style = 'height:80%'>
+       <div>
+       <img src = '".$first_img."'>
+       </div>
+        
+       <div>
+        ".get_the_excerpt($el)."
+       </div>
 
-       </p>
+       </div>
 
     </div></a>";
 
