@@ -86,11 +86,7 @@ $nb = 5;
   </h1>
   </div>
 
-  <div style = "
-  width: 45%;
-  position: relative;
-  left: 34%;
-  ">
+  <div class = "except">
   '.get_the_excerpt($tab[$a]).'
   </div>
   

@@ -1,0 +1,16 @@
+.except{
+
+    width: 45%;
+  position: relative;
+  left: 34%;
+
+
+  @media  screen and (max-width: $max_width_mobile){
+
+    width: 100%;
+    position: relative;
+    left: 0%;
+  
+  }
+
+}

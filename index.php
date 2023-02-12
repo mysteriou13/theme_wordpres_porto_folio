@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang = "fr">
+<html lang = "fr" >
 
     <body>
 
@@ -19,7 +19,7 @@ get_header();
 echo '
 <main class = "d-flex h-100">
            
-<div class = "w-100">
+<div>
 ';
 
 

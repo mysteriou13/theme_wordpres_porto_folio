@@ -42,11 +42,21 @@ Author:  massa anthony
 
 .titre_header {
   position: relative;
-  left: 29%; }
+  left: 17%; }
   @media screen and (max-width: 700px) {
     .titre_header {
       margin-top: 8%;
       margin-bottom: 8%; } }
+
+.except {
+  width: 45%;
+  position: relative;
+  left: 34%; }
+  @media screen and (max-width: 700px) {
+    .except {
+      width: 100%;
+      position: relative;
+      left: 0%; } }
 
 html {
   overflow-x: hidden; }
@@ -75,6 +85,9 @@ main {
   position: relative;
   top: 36vh;
   height: 10vh; }
+  @media screen and (max-width: 700px) {
+    .footer {
+      width: 139%; } }
 
 img {
   max-width: 100%; }
@@ -106,8 +119,11 @@ img {
   margin: auto;
   height: 800px;
   overflow: hidden;
-  width: 90%;
-  max-width: 100%; }
+  width: 100vh; }
+  @media screen and (max-width: 700px) {
+    .card_home {
+      left: 15%;
+      width: 58vh; } }
 
 .menu {
   position: relative;
