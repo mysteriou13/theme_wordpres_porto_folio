@@ -1,6 +1,4 @@
-<?php 
 
-?>
 
 <div style = "
 position: relative;  left: 34%;
@@ -77,10 +75,7 @@ $nb = 5;
   
   if(!empty($first_img)){ 
   
-  echo ' <div style = "height:72%;
-  position: relative;
-  left: 34%;
-  " >
+  echo ' <div class = "div_slide" >
   <img class="" src="'.$first_img.'"  style = "object-fit:cover; height: 100%;">
   </div>';
   }

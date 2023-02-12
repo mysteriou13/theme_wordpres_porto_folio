@@ -1,0 +1,13 @@
+.titre_header{
+
+    position: relative;
+    left: 29%;
+
+    @media  screen and (max-width: $max_width_mobile){
+
+        margin-top: 8%;
+        margin-bottom: 8%;
+
+    }
+
+}

@@ -1,0 +1,15 @@
+.div_slide{
+
+  height:72%;
+  position: relative;
+  left: 34%;
+
+  @media  screen and (max-width: $max_width_mobile){
+
+    height:72%;
+    position: relative;
+    left: 0%;
+
+  }
+
+}

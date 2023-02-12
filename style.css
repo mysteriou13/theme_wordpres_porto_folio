@@ -30,6 +30,24 @@ Author:  massa anthony
     margin-left: 2%;
     margin-bottom: 2%; } }
 
+.div_slide {
+  height: 72%;
+  position: relative;
+  left: 34%; }
+  @media screen and (max-width: 700px) {
+    .div_slide {
+      height: 72%;
+      position: relative;
+      left: 0%; } }
+
+.titre_header {
+  position: relative;
+  left: 29%; }
+  @media screen and (max-width: 700px) {
+    .titre_header {
+      margin-top: 8%;
+      margin-bottom: 8%; } }
+
 html {
   overflow-x: hidden; }
 

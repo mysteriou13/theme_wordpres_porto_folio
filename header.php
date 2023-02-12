@@ -24,11 +24,7 @@
 
             
             <div>
-<center>
 
-<h1> Massa Anthony devellopeur indépendant </h1>
-
-
-</center>
+<h1 class = "titre_header" > Massa Anthony devellopeur indépendant </h1>
 
 </div>
