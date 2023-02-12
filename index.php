@@ -3,6 +3,13 @@
 
     <body>
 
+    <style>
+    <?php
+
+    require_once(__DIR__."/style.css") ;
+
+    ?>
+    </style>
 
      
 <?php 
